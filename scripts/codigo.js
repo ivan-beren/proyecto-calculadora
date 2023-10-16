@@ -27,8 +27,10 @@ let btnSuma = document.getElementById("btnSuma");
 
 
 
+
+
 btn1.addEventListener('click', () =>{
-    alert("Soy un boton")
+    numeroPantalla.innerHTML = "123"
 })
 
 switch(signo){
