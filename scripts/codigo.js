@@ -4,36 +4,81 @@
 
 //let numero2 = parseInt(prompt(`Indique el segundo numero`));
 
-let resultado = 0;
-
+//let resultado = 0;
 
 let numeroPantalla = document.getElementById("numeroPantalla");
+
+let boton = document.querySelectorAll(".boton");
+// query selector all, o que hace es agarrar todos los "Algo" (en este caso, los algo son todos los elementos que tengan la clas boton, por eso esta escrito .boton como si fuera css) y los ordena en una fila
+
+console.log(boton);
+
+let botonNumero = document.querySelectorAll(".botonNumero");
+
+let btnOn = document.getElementById("btnOn");
+let btnOff = document.getElementById("btnOff");
+let btnDelete = document.getElementById("btnDelete");
+let btnDiv = document.getElementById("btnDiv");
 let btn1 = document.getElementById("btn1");
 let btn2 = document.getElementById("btn2");
 let btn3 = document.getElementById("btn3");
-let btnDiv = document.getElementById("btnDiv");
+let btnMult = document.getElementById("btnMult");
 let btn4 = document.getElementById("btn4");
 let btn5 = document.getElementById("btn5");
 let btn6 = document.getElementById("btn6");
-let btnMult = document.getElementById("btnMult");
+let btnSuma = document.getElementById("btnSuma");
 let btn7 = document.getElementById("btn7");
 let btn8 = document.getElementById("btn8");
 let btn9 = document.getElementById("btn9");
 let btnResta = document.getElementById("btnResta");
 let btn0 = document.getElementById("btn0");
 let btnComa = document.getElementById("btnComa");
+let btnC = document.getElementById("btnC");
 let btnIgual = document.getElementById("btnIgual");
-let btnSuma = document.getElementById("btnSuma");
 
+let numero1 = "";
 
-
-
-
-btn1.addEventListener('click', () =>{
-    numeroPantalla.innerHTML = "123"
+botonNumero.forEach(cerveza => {
+    console.log("soy un boton");
 })
 
-switch(signo){
+// const agregarEventos = (boton) => {
+//   boton.addEventListener("click", () => {
+//     const botonApretado = boton.textContent;
+//     console.log(boton.textContent);
+
+//     numeroPantalla.value += botonApretado;
+//   });
+// };
+
+// boton.forEach(agregarEventos);
+
+/*btn1.addEventListener('click', () =>{
+    numeroPantalla.innerHTML = "Hola"
+    console.log(btn1.textContent);
+})*/
+
+/*function botonApretado () {
+    const botonNuevo = boton.textContent
+
+    if(botonNuevo === 0){
+        numeroPantalla = botonNuevo
+    }else{
+        numeroPantalla += botonNuevo
+    }
+}*/
+
+//let numero = "";
+
+//function operador(num){
+//    numero = numero + num;
+//}
+
+//btn1.addEventListener('click', () =>{
+//    numeroPantalla.innerHTML += btn1.textContent
+//})
+
+/*switch(signo){
     case "+":
         resultado = numero1 + numero2;
         console.log("Se suman los dos numeros")
@@ -55,8 +100,4 @@ switch(signo){
         break;
 }
 
-console.log(`El resultado es ${resultado}`)
-
-
-
-
+console.log(`El resultado es ${resultado}`)*/
