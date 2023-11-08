@@ -8,12 +8,15 @@
 
 let numeroPantalla = document.getElementById("numeroPantalla");
 
-let boton = document.querySelectorAll(".boton");
 // query selector all, o que hace es agarrar todos los "Algo" (en este caso, los algo son todos los elementos que tengan la clas boton, por eso esta escrito .boton como si fuera css) y los ordena en una fila
+
+
+let boton = document.querySelectorAll(".boton");
 
 console.log(boton);
 
-let botonNumero = document.querySelectorAll(".botonNumero");
+//let botonNumero = document.querySelectorAll(".botonNumero");
+
 
 let btnOn = document.getElementById("btnOn");
 let btnOff = document.getElementById("btnOff");
@@ -38,8 +41,22 @@ let btnIgual = document.getElementById("btnIgual");
 
 let numero1 = "";
 
-botonNumero.forEach(cerveza => {
-    console.log("soy un boton");
+boton.forEach(numero => {
+    numero.addEventListener("click", () => {
+        const botonApretado = numero.textContent;
+        console.log(numero.textContent);
+
+        if(boton.id === "btnC"){
+            numeroPantalla.value = "0";
+            return;
+        }
+
+        if(numeroPantalla.value === "0"){
+            numeroPantalla.value = botonApretado;
+        }else{
+            numeroPantalla.value += botonApretado;
+        }
+    });
 })
 
 // const agregarEventos = (boton) => {
